@@ -111,7 +111,7 @@ func (client *Client) Taxonomies() *TaxonomiesCollection {
 func (client *Client) Terms() *TermsCollection {
 	return &TermsCollection{
 		client: client,
-		url:    fmt.Sprintf("%v/%v", client.baseURL, CollectionTerms),
+		url:    fmt.Sprintf("%v", client.baseURL),
 	}
 }
 func (client *Client) Statuses() *StatusesCollection {
