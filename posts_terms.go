@@ -32,7 +32,7 @@ func (col *PostsTermsCollection) List(taxonomy string, params interface{}) ([]Po
 func (col *PostsTermsCollection) Tag() *PostsTermsTaxonomyCollection {
 	return &PostsTermsTaxonomyCollection{
 		client:       col.client,
-		url:          fmt.Sprintf("%v/tag", col.url),
+		url:          fmt.Sprintf("%v/tags", col.url),
 		taxonomyBase: "tag",
 	}
 }
