@@ -29,8 +29,8 @@ func (col *TermsCollection) List(taxonomy string, params interface{}) ([]Term, *
 func (col *TermsCollection) Tag() *TermsTaxonomyCollection {
 	return &TermsTaxonomyCollection{
 		client:       col.client,
-		url:          fmt.Sprintf("%v/tag", col.url),
-		taxonomyBase: "tag",
+		url:          fmt.Sprintf("%v/tags", col.url),
+		taxonomyBase: "tags",
 	}
 }
 func (col *TermsCollection) Category() *TermsTaxonomyCollection {
