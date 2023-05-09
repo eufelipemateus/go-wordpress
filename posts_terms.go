@@ -39,8 +39,8 @@ func (col *PostsTermsCollection) Tag() *PostsTermsTaxonomyCollection {
 func (col *PostsTermsCollection) Category() *PostsTermsTaxonomyCollection {
 	return &PostsTermsTaxonomyCollection{
 		client:       col.client,
-		url:          fmt.Sprintf("%v/category", col.url),
-		taxonomyBase: "category",
+		url:          fmt.Sprintf("%v/categories", col.url),
+		taxonomyBase: "categories",
 	}
 }
 

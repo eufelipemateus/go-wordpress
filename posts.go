@@ -76,6 +76,7 @@ type Post struct {
 	Format        string  `json:"format,omitempty"`
 	Sticky        bool    `json:"sticky,omitempty"`
 	Tags          []int   `json:"tags,omitempty"`
+	Categories    []int   `json:"categories,omitempty"`
 }
 
 func (entity *Post) setCollection(col *PostsCollection) {
