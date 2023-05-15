@@ -51,32 +51,69 @@ type Excerpt struct {
 	Raw      string `json:"raw,omitempty"`
 	Rendered string `json:"rendered,omitempty"`
 }
+type Robots struct {
+	Index           string `json:"index,omitempty"`
+	Follow          string `json:"follow,omitempty"`
+	MaxSnippet      string `json:"max-snippet,omitempty"`
+	MaxImagePreview string `json:"max-image-preview,omitempty"`
+	MaxVideoPreview string `json:"max-video-preview,omitempty"`
+}
+
+type OgImage struct {
+	Width  string `json:"width,omitempty"`
+	Height string `json:"height,omitempty"`
+	Url    string `json:"url,omitempty"`
+	Type   string `json:"type,omitempty"`
+}
+
+type YoastHead struct {
+	Title                string    `json:"title,omitempty"`
+	Description          string    `json:"description,omitempty"`
+	Robots               Robots    `json:"robots,omitempty"`
+	Canonical            string    `json:"canonical,omitempty"`
+	OgLocale             string    `json:"og_locale,omitempty"`
+	OgType               string    `json:"og_type,omitempty"`
+	OgTitle              string    `json:"og_title,omitempty"`
+	OgDescription        string    `json:"og_description,omitempty"`
+	OgUrl                string    `json:"og_url,omitempty"`
+	OgSiteMame           string    `json:"og_site_name,omitempty"`
+	ArticlePublisher     string    `json:"article_publisher,omitempty"`
+	ArticleAuthor        string    `json:"article_author,omitempty"`
+	ArticlePublishedTime string    `json:"article_published_time,omitempty"`
+	ArticleModifiedTime  string    `json:"article_modified_time,omitempty"`
+	OgImage              []OgImage `json:"og_image,omitempty"`
+	Author               string    `json:"author,omitempty"`
+	TwitterCard          string    `json:"twitter_card,omitempty"`
+	TwitterCreator       string    `json:"twitter_creator,omitempty"`
+	TwitterSite          string    `json:"twitter_site,omitempty"`
+}
 
 type Post struct {
 	collection *PostsCollection `json:"-,omitempty"`
 
-	ID            int     `json:"id,omitempty"`
-	Date          string  `json:"date,omitempty"`
-	DateGMT       string  `json:"date_gmt,omitempty"`
-	GUID          GUID    `json:"guid,omitempty"`
-	Link          string  `json:"link,omitempty"`
-	Modified      string  `json:"modified,omitempty"`
-	ModifiedGMT   string  `json:"modifiedGMT,omitempty"`
-	Password      string  `json:"password,omitempty"`
-	Slug          string  `json:"slug,omitempty"`
-	Status        string  `json:"status,omitempty"`
-	Type          string  `json:"type,omitempty"`
-	Title         Title   `json:"title,omitempty"`
-	Content       Content `json:"content,omitempty"`
-	Author        int     `json:"author,omitempty"`
-	Excerpt       Excerpt `json:"excerpt,omitempty"`
-	FeaturedMedia int     `json:"featured_media,omitempty"`
-	CommentStatus string  `json:"comment_status,omitempty"`
-	PingStatus    string  `json:"ping_status,omitempty"`
-	Format        string  `json:"format,omitempty"`
-	Sticky        bool    `json:"sticky,omitempty"`
-	Tags          []int   `json:"tags,omitempty"`
-	Categories    []int   `json:"categories,omitempty"`
+	ID            int       `json:"id,omitempty"`
+	Date          string    `json:"date,omitempty"`
+	DateGMT       string    `json:"date_gmt,omitempty"`
+	GUID          GUID      `json:"guid,omitempty"`
+	Link          string    `json:"link,omitempty"`
+	Modified      string    `json:"modified,omitempty"`
+	ModifiedGMT   string    `json:"modifiedGMT,omitempty"`
+	Password      string    `json:"password,omitempty"`
+	Slug          string    `json:"slug,omitempty"`
+	Status        string    `json:"status,omitempty"`
+	Type          string    `json:"type,omitempty"`
+	Title         Title     `json:"title,omitempty"`
+	Content       Content   `json:"content,omitempty"`
+	Author        int       `json:"author,omitempty"`
+	Excerpt       Excerpt   `json:"excerpt,omitempty"`
+	FeaturedMedia int       `json:"featured_media,omitempty"`
+	CommentStatus string    `json:"comment_status,omitempty"`
+	PingStatus    string    `json:"ping_status,omitempty"`
+	Format        string    `json:"format,omitempty"`
+	Sticky        bool      `json:"sticky,omitempty"`
+	Tags          []int     `json:"tags,omitempty"`
+	Categories    []int     `json:"categories,omitempty"`
+	YoastHead     YoastHead `json:"yoast_head_json,omitempty"`
 }
 
 func (entity *Post) setCollection(col *PostsCollection) {
