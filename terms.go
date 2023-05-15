@@ -5,15 +5,19 @@ import (
 	"net/http"
 )
 
+type Description struct {
+	Raw      string `json:"raw,omitempty"`
+	Rendered string `json:"rendered,omitempty"`
+}
 type Term struct {
-	ID          int    `json:"id,omitempty"`
-	Count       int    `json:"integer,omitempty"`
-	Description string `json:"description,omitempty"`
-	Link        string `json:"link,omitempty"`
-	Name        string `json:"name"`
-	Slug        string `json:"slug,omitempty"`
-	Taxonomy    string `json:"taxonomy,omitempty"`
-	Parent      int    `json:"parent,omitempty"`
+	ID          int         `json:"id,omitempty"`
+	Count       int         `json:"integer,omitempty"`
+	Description Description `json:"description,omitempty"`
+	Link        string      `json:"link,omitempty"`
+	Name        string      `json:"name"`
+	Slug        string      `json:"slug,omitempty"`
+	Taxonomy    string      `json:"taxonomy,omitempty"`
+	Parent      int         `json:"parent,omitempty"`
 }
 type TermsCollection struct {
 	client *Client
