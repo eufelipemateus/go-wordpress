@@ -67,25 +67,26 @@ type OgImage struct {
 }
 
 type YoastHead struct {
-	Title                string    `json:"title,omitempty"`
-	Description          string    `json:"description,omitempty"`
-	Robots               Robots    `json:"robots,omitempty"`
-	Canonical            string    `json:"canonical,omitempty"`
-	OgLocale             string    `json:"og_locale,omitempty"`
-	OgType               string    `json:"og_type,omitempty"`
-	OgTitle              string    `json:"og_title,omitempty"`
-	OgDescription        string    `json:"og_description,omitempty"`
-	OgUrl                string    `json:"og_url,omitempty"`
-	OgSiteMame           string    `json:"og_site_name,omitempty"`
-	ArticlePublisher     string    `json:"article_publisher,omitempty"`
-	ArticleAuthor        string    `json:"article_author,omitempty"`
-	ArticlePublishedTime string    `json:"article_published_time,omitempty"`
-	ArticleModifiedTime  string    `json:"article_modified_time,omitempty"`
-	OgImage              []OgImage `json:"og_image,omitempty"`
-	Author               string    `json:"author,omitempty"`
-	TwitterCard          string    `json:"twitter_card,omitempty"`
-	TwitterCreator       string    `json:"twitter_creator,omitempty"`
-	TwitterSite          string    `json:"twitter_site,omitempty"`
+	Title                string      `json:"title,omitempty"`
+	Description          string      `json:"description,omitempty"`
+	Robots               Robots      `json:"robots,omitempty"`
+	Canonical            string      `json:"canonical,omitempty"`
+	OgLocale             string      `json:"og_locale,omitempty"`
+	OgType               string      `json:"og_type,omitempty"`
+	OgTitle              string      `json:"og_title,omitempty"`
+	OgDescription        string      `json:"og_description,omitempty"`
+	OgUrl                string      `json:"og_url,omitempty"`
+	OgSiteMame           string      `json:"og_site_name,omitempty"`
+	ArticlePublisher     string      `json:"article_publisher,omitempty"`
+	ArticleAuthor        string      `json:"article_author,omitempty"`
+	ArticlePublishedTime string      `json:"article_published_time,omitempty"`
+	ArticleModifiedTime  string      `json:"article_modified_time,omitempty"`
+	OgImage              []OgImage   `json:"og_image,omitempty"`
+	Author               string      `json:"author,omitempty"`
+	TwitterCard          string      `json:"twitter_card,omitempty"`
+	TwitterCreator       string      `json:"twitter_creator,omitempty"`
+	TwitterSite          string      `json:"twitter_site,omitempty"`
+	Schema               interface{} `json:"schema,omitempty"`
 }
 
 type Post struct {
