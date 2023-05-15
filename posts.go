@@ -60,8 +60,8 @@ type Robots struct {
 }
 
 type OgImage struct {
-	Width  string `json:"width,omitempty"`
-	Height string `json:"height,omitempty"`
+	Width  int    `json:"width,omitempty"`
+	Height int    `json:"height,omitempty"`
 	Url    string `json:"url,omitempty"`
 	Type   string `json:"type,omitempty"`
 }
