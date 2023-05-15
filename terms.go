@@ -5,14 +5,14 @@ import (
 	"net/http"
 )
 
-type Description struct {
+type TermDescription struct {
 	Raw      string `json:"raw,omitempty"`
 	Rendered string `json:"rendered,omitempty"`
 }
 type Term struct {
 	ID          int         `json:"id,omitempty"`
 	Count       int         `json:"integer,omitempty"`
-	Description Description `json:"description,omitempty"`
+	Description TermDescription `json:"description,omitempty"`
 	Link        string      `json:"link,omitempty"`
 	Name        string      `json:"name"`
 	Slug        string      `json:"slug,omitempty"`
